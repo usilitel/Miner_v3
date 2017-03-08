@@ -1,4 +1,4 @@
-package ru.lesson.lessons.miner.v8;
+package ru.lesson.lessons.miner.v8.source;
 
 
 import javax.imageio.ImageIO;
@@ -43,22 +43,20 @@ public class MinerField  extends JPanel{
     }
     public void drawBomb(Graphics g, int x, int y, boolean isBang){ // рисуем мину
         //this.drawNumber(g,x,y,SIGN_OF_BOMB,color);
-        if(isBang){drawImageFromFile(g,x,y,"MineExplosion.png");}
-        else{drawImageFromFile(g,x,y,"Mine.png");}
+        if(isBang){drawImageFromFile(g,x,y,"../pics/MineExplosion.png");}
+        else{drawImageFromFile(g,x,y,"../pics/Mine.png");}
     }
 
     public void drawFlag(Graphics g, int x, int y, boolean isCorrectFlag){ // рисуем метку
-
         if(isCorrectFlag){ // рисуем правильный флаг
             drawClosedBlock(g,x,y);
-            drawImageFromFile(g,x,y,"Flag.png");
+            drawImageFromFile(g,x,y,"../pics/Flag.png");
         }
         else{ // рисуем неправильно установленный флаг
-            drawImageFromFile(g,x,y,"WrongFlag.png");
+            drawImageFromFile(g,x,y,"../pics/WrongFlag.png");
         }
-
-
     }
+
     public void drawEmptyBlock(Graphics g, int x, int y){ // рисуем пустой открытый блок
         g.setColor(Color.lightGray);
         g.drawRect(x*BLOCK_SIZE, y*BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE);

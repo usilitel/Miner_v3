@@ -1,4 +1,4 @@
-package ru.lesson.lessons.miner.v8;
+package ru.lesson.lessons.miner.v8.source;
 
 import javax.swing.*;
 import java.awt.*;
