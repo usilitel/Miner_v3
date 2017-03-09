@@ -88,7 +88,7 @@ import javax.swing.SwingUtilities;
 
         //@Override
         public void mouseEntered(MouseEvent e) {
-            System.out.println("mouseEntered");
+            //System.out.println("mouseEntered");
         }
         //@Override
         public void mouseMoved(MouseEvent e) {
@@ -96,7 +96,7 @@ import javax.swing.SwingUtilities;
         }
         //@Override
         public void mouseExited(MouseEvent e) {
-            System.out.println("mouseExited");
+            //System.out.println("mouseExited");
         }
         //@Override
         public void mouseDragged(MouseEvent e) {
@@ -110,7 +110,7 @@ import javax.swing.SwingUtilities;
         }
         //@Override
         public void mousePressed(MouseEvent e) {
-            System.out.println("mousePressed");
+            //System.out.println("mousePressed");
             if(e.getButton()==MOUSE_BUTTON_LEFT){
                 //System.out.println("mousePressed");
                 int x = e.getX() / BLOCK_SIZE; // вычисляем координаты ячейки
@@ -120,12 +120,12 @@ import javax.swing.SwingUtilities;
         }
         //@Override
         public void mouseClicked(MouseEvent e) {
-            System.out.println("mouseClicked");
+            //System.out.println("mouseClicked");
         }
         //@Override
         public void mouseReleased(MouseEvent e) {
             //System.out.println("mouseReleased");
-            System.out.println("mouseReleased " + SwingUtilities.isLeftMouseButton(e) + " " + SwingUtilities.isRightMouseButton(e) + " " + e.getButton());
+            //System.out.println("mouseReleased " + SwingUtilities.isLeftMouseButton(e) + " " + SwingUtilities.isRightMouseButton(e) + " " + e.getButton());
             //super.mouseReleased(e);
             int x = e.getX() / BLOCK_SIZE; // вычисляем координаты ячейки
             int y = e.getY() / BLOCK_SIZE;
@@ -164,7 +164,7 @@ import javax.swing.SwingUtilities;
                     }
                     break;
                 case ACTION_MARK_UNMARK: // помечаем/снимаем метку
-                    System.out.println(""+cell.getCellState());
+                    //System.out.println(""+cell.getCellState());
                     switch(cell.getCellState()) {
                         case MinerCell.CELL_STATE_CLOSED:
                             cell.setCellState(MinerCell.CELL_STATE_MARKED_AS_MINE);
